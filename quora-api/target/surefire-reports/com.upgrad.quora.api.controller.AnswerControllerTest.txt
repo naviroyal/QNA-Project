@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.upgrad.quora.api.controller.AnswerPartControllerTest
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 1.066 s <<< FAILURE! - in com.upgrad.quora.api.controller.AnswerPartControllerTest
+editAnswersWithoutOwnership(com.upgrad.quora.api.controller.AnswerPartControllerTest)  Time elapsed: 0.561 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<403> but was:<200>
+	at com.upgrad.quora.api.controller.AnswerPartControllerTest.editAnswersWithoutOwnership(AnswerPartControllerTest.java:79)
+
+editAnswersWithSignedOutUser(com.upgrad.quora.api.controller.AnswerPartControllerTest)  Time elapsed: 0.338 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.dao.IncorrectResultSizeDataAccessException: query did not return a unique result: 2; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 2
+	at com.upgrad.quora.api.controller.AnswerPartControllerTest.editAnswersWithSignedOutUser(AnswerPartControllerTest.java:62)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: query did not return a unique result: 2; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 2
+	at com.upgrad.quora.api.controller.AnswerPartControllerTest.editAnswersWithSignedOutUser(AnswerPartControllerTest.java:62)
+Caused by: javax.persistence.NonUniqueResultException: query did not return a unique result: 2
+	at com.upgrad.quora.api.controller.AnswerPartControllerTest.editAnswersWithSignedOutUser(AnswerPartControllerTest.java:62)
+
